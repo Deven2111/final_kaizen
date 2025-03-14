@@ -75,7 +75,7 @@ export interface KaizenFormData {
     equipment: string;
     responsibility: string;
     status: 'Pending' | 'In Progress' | 'Completed';
-    targetDate: string;
+    targetDate: Date;
   }>;
   registration: {
     regNo: string;

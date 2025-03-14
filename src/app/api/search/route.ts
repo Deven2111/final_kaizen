@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
       WHERE 1=1
     `;
 
-    const params: any[] = [];
+    const params=[];
 
     if (theme && theme.trim() !== '') {
       query += ' AND theme = ?';

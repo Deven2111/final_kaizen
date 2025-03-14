@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     const periodDate = new Date(period);
     const formattedPeriod = new Date(periodDate.getTime() - (periodDate.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
    // Store in database
-const [result] = await pool.execute(
+  await pool.execute(
   'INSERT INTO kaizen_reports (theme, dept, file_name, drive_file_id, upload_date) VALUES (?, ?, ?, ?, ?)',
   [theme, dept, file.name, driveFileId, formattedPeriod]
 );
