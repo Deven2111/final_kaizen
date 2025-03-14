@@ -69,6 +69,7 @@ function getGoogleDriveAuth() {
   try {
     return JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
   } catch (error) {
+    console.error('Invalid Google Drive credentials format:', error);
     throw new Error("Invalid Google Drive credentials format. Ensure it's a valid JSON string.");
   }
 }
