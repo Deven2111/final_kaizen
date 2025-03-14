@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     // Save file temporarily
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    const tempPath = join(process.cwd(), 'tmp', file.name);
+    const tempPath = join('/tmp', file.name);
     await writeFile(tempPath, buffer);
 
     // Upload to Google Drive
