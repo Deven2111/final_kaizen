@@ -79,7 +79,7 @@ const auth = new google.auth.GoogleAuth({
   credentials: getGoogleDriveAuth(),
   scopes: ['https://www.googleapis.com/auth/drive.file'],
 });
-
+export default auth;
 const drive = google.drive({ version: 'v3', auth });
 
 // ✅ Upload file function
