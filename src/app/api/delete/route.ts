@@ -1,7 +1,7 @@
 // src/app/api/delete/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
-import { auth } from '@/lib/drive';
+import auth from '@/lib/drive';
 import pool from '@/lib/db';
 
 export async function DELETE(request: NextRequest) {
