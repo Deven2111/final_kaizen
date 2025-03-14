@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 import { Readable } from 'stream';
-import { auth } from '@/lib/drive';
+import auth from '@/lib/drive';
 
 export async function GET(request: NextRequest) {
   try {
