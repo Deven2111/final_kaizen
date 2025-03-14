@@ -1,7 +1,7 @@
 // src/app/api/view/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
-import { auth } from '@/lib/drive';
+import auth from '@/lib/drive';
 
 export async function GET(request: NextRequest) {
   try {
